@@ -1,10 +1,12 @@
 import sys
 from PySide6.QtWidgets import QApplication, QLabel
 
+from nexus.views import MainWindow
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    label = QLabel("Hello, Nexus!")
-    label.show()
+    window = MainWindow()
+    window.show()
 
     sys.exit(app.exec())
