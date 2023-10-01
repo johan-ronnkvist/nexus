@@ -3,4 +3,4 @@ from PySide6.QtGui import QAction
 
 
 def post_action(action: QAction, target: QObject):
-    target.s
+    pass

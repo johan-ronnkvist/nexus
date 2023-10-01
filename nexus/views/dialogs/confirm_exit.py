@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QDialog, QVBoxLayout, QLabel, QPushButton
+from PySide6.QtWidgets import QDialog, QLabel, QPushButton, QVBoxLayout
 
 
 class ConfirmExitDialog(QDialog):
@@ -9,9 +9,7 @@ class ConfirmExitDialog(QDialog):
         layout = QVBoxLayout()
 
         # Add a label with the warning message
-        self.message_label = QLabel(
-            "You have unsaved changes. Do you want to exit without saving?"
-        )
+        self.message_label = QLabel("You have unsaved changes. Do you want to exit without saving?")
         layout.addWidget(self.message_label)
 
         # Create buttons

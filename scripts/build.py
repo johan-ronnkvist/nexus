@@ -3,7 +3,7 @@ import subprocess
 
 
 def compile_with_pyinstaller(script: str, args=None):
-    command = ['pyinstaller', script, '--onefile', '--noconfirm']
+    command = ["pyinstaller", script, "--onefile", "--noconfirm"]
     if args:
         command += args
     print(f"Running pyinstaller: {command}")
@@ -19,10 +19,9 @@ def compile_with_pyinstaller(script: str, args=None):
 
 def build_executable():
     print("Building executable...")
-    script = os.path.join('nexus', 'main.py')
+    script = os.path.join("nexus", "main.py")
     compile_with_pyinstaller(script)
 
 
 def build_installer():
     print("Building installer...")
-

@@ -1,7 +1,6 @@
 from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import QMainWindow
 
-from nexus.views.dialogs.confirm_exit import ConfirmExitDialog
 from nexus.views.graphics_scene import QGraphicsView
 from nexus.views.menu_bar import MenuBar
 from nexus.views.status_bar import StatusBar

@@ -1,8 +1,9 @@
 import logging
 import sys
-from PySide6.QtWidgets import QApplication, QLabel
 
-from nexus.views import MainWindow
+from PySide6.QtWidgets import QApplication
+
+from nexus.views.main_window import MainWindow
 
 _logger = logging.getLogger(__name__)
 

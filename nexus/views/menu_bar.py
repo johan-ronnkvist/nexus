@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QMenuBar, QMenu
+from PySide6.QtWidgets import QMenu, QMenuBar
 
 from nexus.actions.quit import QuitAction
 

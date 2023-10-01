@@ -26,8 +26,9 @@ repos:
     hooks:
     -   id: pytest
         name: pytest
-        stages: [push]
+        stages: [commit]
         entry: pytest
         language: python
         types: [python]
-        additional_dependencies: [pytest]
+        additional_dependencies: [pytest, PySide6]
+        args: ["tests/"]
