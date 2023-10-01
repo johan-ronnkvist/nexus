@@ -1,5 +1,7 @@
 from PySide6.QtWidgets import QMenuBar, QMenu
 
+from nexus.actions.quit import QuitAction
+
 
 class MenuBar(QMenuBar):
     def __init__(self, parent=None):
@@ -8,6 +10,12 @@ class MenuBar(QMenuBar):
         self._edit = self.addMenu("Edit")
         self._view = self.addMenu("View")
         self._help = self.addMenu("Help")
+
+        self._configure_file()
+
+    def _configure_file(self):
+        self.file.addAction(QuitAction(self))
+        pass
 
     @property
     def file(self) -> QMenu:

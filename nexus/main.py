@@ -1,12 +1,19 @@
+import logging
 import sys
 from PySide6.QtWidgets import QApplication, QLabel
 
 from nexus.views import MainWindow
 
+_logger = logging.getLogger(__name__)
+
 if __name__ == "__main__":
+    _logger.debug("Starting Nexus")
     app = QApplication(sys.argv)
 
     window = MainWindow()
     window.show()
 
-    sys.exit(app.exec())
+    exit_code = app.exec()
+    _logger.debug(f"Exiting Nexus (exit code:{exit_code})")
+
+    sys.exit(exit_code)

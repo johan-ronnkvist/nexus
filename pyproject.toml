@@ -8,9 +8,11 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
 pyside6 = "^6.5.2"
+pre-commit = "^3.4.0"
 
 [tool.poetry.group.dev.dependencies]
 pyinstaller = "^5.13.2"
+pytest = "^7.4.2"
 
 [tool.poetry.scripts]
 build_exe = "scripts.build:build_executable"

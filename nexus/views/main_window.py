@@ -1,5 +1,7 @@
+from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import QMainWindow
 
+from nexus.views.dialogs.confirm_exit import ConfirmExitDialog
 from nexus.views.graphics_scene import QGraphicsView
 from nexus.views.menu_bar import MenuBar
 from nexus.views.status_bar import StatusBar
@@ -14,3 +16,15 @@ class MainWindow(QMainWindow):
         self.setStatusBar(StatusBar(self))
         self.setCentralWidget(QGraphicsView())
 
+    def _has_unsaved_changed(self) -> bool:
+        return False
+
+    def _discard_changes(self) -> bool:
+        return True
+
+    def closeEvent(self, event: QCloseEvent) -> None:
+        if self._has_unsaved_changed():
+            if not self._discard_changes():
+                event.ignore()
+
+        event.accept()
