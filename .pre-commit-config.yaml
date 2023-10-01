@@ -31,4 +31,3 @@ repos:
         language: python
         types: [python]
         additional_dependencies: [pytest, PySide6]
-        args: ["tests/"]
