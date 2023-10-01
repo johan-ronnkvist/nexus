@@ -8,15 +8,30 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
 pyside6 = "^6.5.2"
-pre-commit = "^3.4.0"
 
 [tool.poetry.group.dev.dependencies]
 pyinstaller = "^5.13.2"
 pytest = "^7.4.2"
+black = "^23.9.1"
+pre-commit = "^3.4.0"
+ruff = "^0.0.291"
 
 [tool.poetry.scripts]
 build_exe = "scripts.build:build_executable"
 build_installer = "scripts.build:build_installer"
+
+[tool.ruff]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+
+[tool.black]
+line-length = 120
 
 [build-system]
 requires = ["poetry-core"]
